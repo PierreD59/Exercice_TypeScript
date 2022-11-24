@@ -1,3 +1,8 @@
+/**
+ * Fonction qui additionne un nombre indéfinit de note et en fait une moyenne. Si une note est inférieur à 0 ou supérieur à 20, la note n'est pas prit en compte.
+ * @param notes : number
+ * @returns sum
+ */
 function calMoyEleve(...notes: number[]): number {
   let sum: number = 0;
   notes.forEach((note) => {
@@ -9,7 +14,12 @@ function calMoyEleve(...notes: number[]): number {
 });
 return sum / notes.length;
 }
-
+/**
+ * Fonction qui affiche une mention en fonction de la moyenne de l'élève.
+ * @param eleve :string
+ * @param notes :number
+ * @returns console.log mention
+ */
 function mentionEleve(eleve: string, ...notes: number[]): void {
   let moy = calMoyEleve(...notes);
   switch (true) {
